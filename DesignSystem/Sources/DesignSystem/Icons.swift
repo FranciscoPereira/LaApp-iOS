@@ -1,7 +1,7 @@
 import SwiftUI
 
 public enum Icons {
-    public static let main = Image(.icon)
+    public static let main = Image(uiImage: .checkmark)
 }
 
 #if DEBUG

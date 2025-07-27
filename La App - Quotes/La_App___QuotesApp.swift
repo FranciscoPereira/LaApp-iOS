@@ -6,7 +6,6 @@ import DesignSystem
 
 @main
 struct Application: App {
-    private let themeProvider = ThemeProvider(currentTheme: .light)
     
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
@@ -24,7 +23,6 @@ struct Application: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(themeProvider)
         }
         .modelContainer(sharedModelContainer)
     }

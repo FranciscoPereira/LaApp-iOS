@@ -34,17 +34,11 @@ public struct PrimaryButtonComponent: View {
 }
 
 #if DEBUG
-#Preview("Light") {
-    PrimaryButtonComponent_Previews(appTheme: .light)
-}
-
-#Preview("Dark") {
-    PrimaryButtonComponent_Previews(appTheme: .dark)
+#Preview {
+    PrimaryButtonComponent_Previews()
 }
 
 struct PrimaryButtonComponent_Previews: View {
-    let appTheme: AppTheme
-    
     var body: some View {
         VStack {
             PrimaryButtonComponent(
@@ -61,7 +55,7 @@ struct PrimaryButtonComponent_Previews: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(appTheme.colors.background)
+        .background(Color.background)
     }
 }
 #endif

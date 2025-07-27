@@ -45,7 +45,7 @@ var body: some View {
         )
         Spacer()
     }
-    .background(AppTheme.light.colors.background)
+    .background(Color.background)
 }
 }
 #endif
