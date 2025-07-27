@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  La App - Quotes
-//
-//  Created by Francisco Pereira on 26/07/2025.
-//
-
 import SwiftUI
 import SwiftData
 

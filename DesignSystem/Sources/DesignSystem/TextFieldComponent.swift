@@ -44,7 +44,7 @@ struct TextFieldComponent_Preview: View {
             )
             Spacer()
         }
-        .background(Color.background)
+        .background(AppTheme.light.colors.background)
     }
 }
 #endif

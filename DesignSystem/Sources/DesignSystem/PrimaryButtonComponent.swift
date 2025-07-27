@@ -34,22 +34,34 @@ public struct PrimaryButtonComponent: View {
 }
 
 #if DEBUG
-#Preview {
-    VStack {
-        PrimaryButtonComponent(
-            title: "Sign Up",
-            action: {}
-        )
-        .padding()
-        PrimaryButtonComponent(
-            title: "Sign Up - disabled",
-            enabled: false,
-            action: {}
-        )
-        .padding()
-        Spacer()
+#Preview("Light") {
+    PrimaryButtonComponent_Previews(appTheme: .light)
+}
+
+#Preview("Dark") {
+    PrimaryButtonComponent_Previews(appTheme: .dark)
+}
+
+struct PrimaryButtonComponent_Previews: View {
+    let appTheme: AppTheme
+    
+    var body: some View {
+        VStack {
+            PrimaryButtonComponent(
+                title: "Sign Up",
+                action: {}
+            )
+            .padding()
+            PrimaryButtonComponent(
+                title: "Sign Up - disabled",
+                enabled: false,
+                action: {}
+            )
+            .padding()
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(appTheme.colors.background)
     }
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(Color.background)
 }
 #endif

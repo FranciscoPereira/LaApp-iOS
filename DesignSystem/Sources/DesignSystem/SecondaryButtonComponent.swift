@@ -41,6 +41,6 @@ public struct SecondaryButtonComponent: View {
         Spacer()
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(Color.background)
+    .background(AppTheme.light.colors.background)
 }
 #endif

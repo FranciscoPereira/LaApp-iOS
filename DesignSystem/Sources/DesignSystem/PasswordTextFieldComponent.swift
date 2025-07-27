@@ -1,9 +1,3 @@
-//
-//  PasswordTextFieldComponent.swift
-//  DesignSystem
-//
-//  Created by Francisco Pereira on 12/07/2025.
-//
 import SwiftUI
 
 public struct PasswordTextFieldComponent: View {
@@ -51,7 +45,7 @@ var body: some View {
         )
         Spacer()
     }
-    .background(Color.background)
+    .background(AppTheme.light.colors.background)
 }
 }
 #endif

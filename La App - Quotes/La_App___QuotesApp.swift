@@ -2,9 +2,12 @@
 
 import SwiftUI
 import SwiftData
+import DesignSystem
 
 @main
-struct ___PACKAGENAME:identifier___App: App {
+struct Application: App {
+    private let themeProvider = ThemeProvider(currentTheme: .light)
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -21,6 +24,7 @@ struct ___PACKAGENAME:identifier___App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(themeProvider)
         }
         .modelContainer(sharedModelContainer)
     }
