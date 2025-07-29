@@ -1,7 +1,5 @@
 import SwiftUI
 
-import SwiftUI
-
 public extension Color {
     static let background = Color("BackgroundColor", bundle: .module)
     static let foreground = Color("ForegroundColor", bundle: .module)

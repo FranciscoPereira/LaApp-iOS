@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6668487C2E369036000D9AC5 /* AboutFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 6668487B2E369036000D9AC5 /* AboutFeature */; };
 		66BC878E2E3648E3009C85E3 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 66BC878D2E3648E3009C85E3 /* DesignSystem */; };
+		66BC87902E364F74009C85E3 /* HomeFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 66BC878F2E364F74009C85E3 /* HomeFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 		66BC87602E344779009C85E3 /* HomeFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = HomeFeature; path = ../HomeFeature; sourceTree = SOURCE_ROOT; };
 		66BC87792E34483E009C85E3 /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DesignSystem; sourceTree = "<group>"; };
 		66BC877A2E344D8D009C85E3 /* LaAppNavigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = LaAppNavigation; sourceTree = "<group>"; };
+		66BC87912E364FC5009C85E3 /* AboutFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AboutFeature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -72,7 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66BC87902E364F74009C85E3 /* HomeFeature in Frameworks */,
 				66BC878E2E3648E3009C85E3 /* DesignSystem in Frameworks */,
+				6668487C2E369036000D9AC5 /* AboutFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +101,7 @@
 		66BC87282E344747009C85E3 = {
 			isa = PBXGroup;
 			children = (
+				66BC87912E364FC5009C85E3 /* AboutFeature */,
 				66BC877A2E344D8D009C85E3 /* LaAppNavigation */,
 				66BC87792E34483E009C85E3 /* DesignSystem */,
 				66BC87602E344779009C85E3 /* HomeFeature */,
@@ -145,6 +151,8 @@
 			name = "La App - Quotes";
 			packageProductDependencies = (
 				66BC878D2E3648E3009C85E3 /* DesignSystem */,
+				66BC878F2E364F74009C85E3 /* HomeFeature */,
+				6668487B2E369036000D9AC5 /* AboutFeature */,
 			);
 			productName = "La App - Quotes";
 			productReference = 66BC87312E344747009C85E3 /* La App - Quotes.app */;
@@ -630,9 +638,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6668487B2E369036000D9AC5 /* AboutFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AboutFeature;
+		};
 		66BC878D2E3648E3009C85E3 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
+		};
+		66BC878F2E364F74009C85E3 /* HomeFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
