@@ -1,17 +1,42 @@
 import SwiftUI
 
 public struct CardView: View {
+    private let title: String
+    private let icon: Image
+    private let saved: Bool
+    private let description: String
+    private let author: String
+    private let reference: String
+    private let actionWatchVideo: () -> Void
+    private let actionShare: () -> Void
     
-    public init() {}
+    public init(
+        title: String,
+        icon: Image,
+        saved: Bool,
+        description: String,
+        author: String,
+        reference: String,
+        actionWatchVideo: @escaping () -> Void,
+        actionShare: @escaping () -> Void
+    ) {
+        self.title = title
+        self.icon = icon
+        self.saved = saved
+        self.description = description
+        self.author = author
+        self.reference = reference
+        self.actionWatchVideo = actionWatchVideo
+        self.actionShare = actionShare
+    }
     
     public var body: some View {
             VStack {
                 HStack {
-                    
-                    Icons.brain
+                    icon
                         .background(Color.accent)
                         .clipShape(.rect(cornerRadius: 8))
-                    Text("Type of card")
+                    Text(title)
                         .font(.headline)
                     Button(action: {
                         
@@ -20,27 +45,14 @@ public struct CardView: View {
                             .foregroundColor(Color.accent)
                     }
                 }
-                HStack {
-                    Icons.quotes
-                    Spacer()
-                }
-                Text("The interpretation of dreams is the royal road to a knowledge of the unconscious activities of the mind.")
-                    .padding()
-                    .multilineTextAlignment(.center)
-                    .font(.body)
+                QuoteView(text: description)
                 HStack {
                     Spacer()
-                    Icons.quotes
-                        .rotationEffect(.radians(.pi))
-                }
-                HStack {
-                    Spacer()
-                    //                Image(systemName: "person.circle")
-                    Text("Sigmund Freud")
+                    Text(author)
                         .font(.caption)
-                    Icons.brain
+                    icon
                 }
-                Text("From 'The Interpretation of Dreams' (1900)")
+                Text(reference)
                     .font(.caption)
                 HStack {
                     Button(action: {
@@ -65,14 +77,20 @@ public struct CardView: View {
                     }
                 }
             }
-            .padding()
-        .fixedSize(horizontal: false, vertical: true)
-        .background(Color.primary.opacity(0.1))
-        .clipShape(.rect(cornerRadius: 20))
+            .modifier(CardViewModifier())
     }
 }
 
 #Preview {
-    CardView()
+    CardView(
+        title: "Dreams & Unconscious",
+        icon: Icons.brain,
+        saved: false,
+        description: "The interpretation of dreams is the royal road to a knowledge of the unconscious activities of the mind.",
+        author: "Sigmund Freud",
+        reference: "From 'The Interpretation of Dreams' (1900)",
+        actionWatchVideo: {},
+        actionShare: {}
+    )
         .frame(width: 320)
 }
