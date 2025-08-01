@@ -60,6 +60,16 @@ struct AboutScreenView: View {
                             )
                         ]
                     )
+                    VStack {
+                        QuoteView(text: "The goal of all life is death, and, looking backwards, that from inanimate things came to life.")
+                        HStack {
+                            Spacer()
+                            Text("— Freud on the death drive")
+                                .font(.caption)
+                            Spacer()
+                        }
+                    }
+                    .modifier(CardViewModifier())
                 }
             }
         }

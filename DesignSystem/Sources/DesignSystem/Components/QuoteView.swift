@@ -21,7 +21,7 @@ public struct QuoteView: View {
                 Spacer()
                 Icons.quotes
                     .rotationEffect(.radians(.pi))
-            }
+            }   
         }
     }
 }
